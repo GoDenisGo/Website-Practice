@@ -1,0 +1,26 @@
+/* Clear default browser styling: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    height: 100vh;
+}
+
+article h1 {
+    font-size: 2em;
+}
+
+.welcome {
+    background: lightblue;
+}
+
+.biscuits {
+    background: lightpink;
+}
+
+.marriage {
+    background: sandybrown;
+}
