@@ -2,10 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+    Mobile theme colours. Applies to in-browser as well as PWAs.
+    The colour of the address and notification bars can be manipulated using these tags.
+     -->
+    <meta name = “theme-color” content = '#00bef6'>
+    <meta content='#00bef6' name='theme-color'/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00bef6">
+
     <title>Home</title>
     <link href="hardborders.css" rel="stylesheet"/>
+    <script defer src="scrolling.js"></script>
 </head>
 
+<!--
+The article classes have no semantic purpose other than to determine the theme colours.
+The main body has a snapping behaviour attributed to it from the root (<html>) element
+on each scroll. The viewport should only display one article at a time, as an effect of
+this.
+-->
 <body>
     <article class="welcome">
         <h1>You've made it home!</h1>
@@ -31,5 +48,4 @@
         </section>
     </article>
 </body>
-
 </html>

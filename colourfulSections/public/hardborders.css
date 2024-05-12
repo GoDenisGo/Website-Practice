@@ -5,10 +5,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
+article {
+    scroll-snap-align: start end;
+}
+
 article {
     height: 100vh;
 }
 
+/* Adjusting the article headings to make them discernable from section headings. */
 article h1 {
     font-size: 2em;
 }
