@@ -6,14 +6,13 @@
 }
 
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 }
 
 article {
-    scroll-snap-align: start end;
-}
-
-article {
+    opacity: 0;
+    scroll-snap-align: start start;
     height: 100vh;
 }
 
@@ -22,14 +21,37 @@ article h1 {
     font-size: 2em;
 }
 
-.welcome {
+#lightblue {
     background: lightblue;
 }
 
-.biscuits {
+#lightpink {
     background: lightpink;
 }
 
-.marriage {
+#sandybrown {
     background: sandybrown;
+}
+
+/*
+TODO: Animation timelines are not supported in Firefox as of 15th May 2024.
+ - It would be useful to test how animation timelines can be used to improve the site.
+*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0, 1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .slideIn-animation {
+        animation: slideIn 0.5s alternate;
+        opacity: 1;
+    }
 }
